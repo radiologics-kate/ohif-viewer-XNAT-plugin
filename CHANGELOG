@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-**1.14.1 Beta**
-Temporary Bug Fix:
-- Disabled double-click enlarge viewport, as it causes clashes with cornerstoneTools v3.
-=======
-**1.17.0 Beta WIP**
+**1.17.0-RC1**
 UX
 - Removed the ON/OFF tags from the ROI stats and interpolation toggles, as it wasn't clear if e.g. it is OFF, or clicking it will turn it off. It now highlights bright green when its on. (Happy for fee$
 
