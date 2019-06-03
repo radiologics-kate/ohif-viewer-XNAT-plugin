@@ -93,7 +93,7 @@ public class CreateOhifViewerMetadata {
 
   private PatientRoot scanPath(String path)
   {
-    logger.debug("DICOM search: " + path);
+    logger.error("DICOM search: " + path);
 
     DicomReceiver dcmRec  = new DicomReceiver();
     PathScan<DicomObject> pathScan = dcmTk.createPathScan();
@@ -120,19 +120,31 @@ public class CreateOhifViewerMetadata {
 
     ovi.setTransactionId(transactionId);
     ovi.setStudies(oviStudyList);
+    
+    logger.error(root.toString());
 
     List<Patient> patList = root.getPatientList();
+    
+    logger.error(Integer.toString(patList.size()));
     for (Patient pat : patList)
     {
+      logger.error(" ");
+      logger.error("patient:");
+      logger.error(pat.getId());
       List<Study> studyList = pat.getStudyList();
       for (Study std : studyList)
       {
+        logger.error("_study:");
+        logger.error(std.getId());
         OhifViewerInputStudy oviStd = new OhifViewerInputStudy(std, pat);
         oviStudyList.add(oviStd);
 
         List<Series> seriesList = std.getSeriesList();
         for (Series ser : seriesList)
         {
+          logger.error("__series:");
+          logger.error(ser.getUid());
+        
           OhifViewerInputSeries oviSer = new OhifViewerInputSeries(ser);
           oviStd.addSeries(oviSer);
 
