@@ -1,3 +1,10 @@
+**2.0 RC-2**
+
+UI/UX:
+- Rebuilt all Segmentation/XNAT dialogs as React components ready for the new version. Render these as Blaze-encapsulated-react components for now.
+- The top toolbar no longer has settings/IO functionality for contours and segmentations, only tools.
+- The management/IO/Settings of ROIContours and Segmentations has been to the right sidebar.
+
 **1.17.0-RC1**
 UX
 - Removed the ON/OFF tags from the ROI stats and interpolation toggles, as it wasn't clear if e.g. it is OFF, or clicking it will turn it off. It now highlights bright green when its on. (Happy for fee$

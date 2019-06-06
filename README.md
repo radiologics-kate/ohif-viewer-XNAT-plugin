@@ -1,4 +1,4 @@
-# XNAT-OHIF Viewer Plugin 1.17.0-RC1 Beta
+# XNAT-OHIF Viewer Plugin 2.0-RC2
 
 <p align="center">
   <img src="assets/Logo.png" width="256" title="OHIF-XNAT-logo">
@@ -9,10 +9,12 @@ Up to date viewer jars are available in the dist directory.
 
 **PLEASE DO NOT ATTEMPT TO USE IN PRODUCTION AT THIS STAGE.**
 
-**2.1.0 ALPHA**
+**2.0 RC-2**
 
 UI/UX:
-- Rebuilt all Peppermint/XNAT dialogs as React components ready for the new version. Render these as Blaze-encapsulated-react components for now. 
+- Rebuilt all Segmentation/XNAT dialogs as React components ready for the new version. Render these as Blaze-encapsulated-react components for now. 
+- The top toolbar no longer has settings/IO functionality for contours and segmentations, only tools.
+- The management/IO/Settings of ROIContours and Segmentations has been to the right sidebar.
 
 A full list of changes are available in the `CHANGELOG`.
 
